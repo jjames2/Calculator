@@ -22,7 +22,7 @@ public class add extends HttpServlet {
     }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * returns sum of parameters x and y
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		double x = 0;
@@ -31,7 +31,7 @@ public class add extends HttpServlet {
 		    x = Double.parseDouble(request.getParameter("x"));
 			y = Double.parseDouble(request.getParameter("y"));
 		}
-		catch(Exception e)
+		catch(NumberFormatException | NullPointerException e)
 		{
 			response.getWriter().append("Invalid parameters");
 			return;

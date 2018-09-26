@@ -19,11 +19,10 @@ public class divide extends HttpServlet {
      */
     public divide() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * returns quotient of parameters x and y
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		double x = 0;
@@ -32,7 +31,7 @@ public class divide extends HttpServlet {
 		    x = Double.parseDouble(request.getParameter("x"));
 			y = Double.parseDouble(request.getParameter("y"));
 		}
-		catch(Exception e)
+		catch(NumberFormatException | NullPointerException e)
 		{
 			response.getWriter().append("Invalid parameters");
 			return;
@@ -45,13 +44,4 @@ public class divide extends HttpServlet {
 			response.getWriter().append("Divide by zero not allowed");
 		}
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
 }
