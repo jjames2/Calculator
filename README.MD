@@ -1,18 +1,18 @@
 # Calculator
 
-This is an API for addition, multiplication, subtraction, and division. 
+This is an API for addition, multiplication, subtraction, and division. It is composed of 4 java servlets listening for requests on 4 different endpoints.
 
 ## Usage
 
 A war file is located in the root directory named Calculator.war, and is optimized for Tomcat 7.0. The endpoints are described below:
 
-### add
+### /add
 Takes floating point parameters x and y, and returns their sum as a floating point value
-### subtract
+### /subtract
 Takes floating point parameters x and y, and returns their difference as a floating point value
-### multiply
+### /multiply
 Takes floating point parameters x and y, and returns their product as a floating point value
-### divide
+### /divide
 Takes floating point parameters x and y, and returns their quotient as a floating point value
 
 ## Sample Calls
